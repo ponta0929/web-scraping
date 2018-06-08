@@ -1,3 +1,2 @@
 # logƒtƒ@ƒCƒ‹‚Ìœ‹Ž
 *.log
-/log/
