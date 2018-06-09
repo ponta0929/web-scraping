@@ -7,7 +7,9 @@
 		pip installにより下記モジュールをインストールしてください
 			requests
 			beautifulsoup4
-
+＊Selenium WebDriverのChrome用ドライバ
+	下記からダウンロードします
+	http://chromedriver.storage.googleapis.com/index.html?path=2.40/
 
 機能
 ＊指定したパス以下のコンテンツを取得する機能
