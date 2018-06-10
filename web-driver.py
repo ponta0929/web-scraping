@@ -3,6 +3,7 @@ import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import bs4
 
 
 #後で設定化
@@ -21,7 +22,7 @@ today = str(dt.year) + '-' + str(dt.month) + '-' + str(dt.day)
 logging.basicConfig(
         level = logging.DEBUG
         , format = '%(asctime)s - %(levelname)s - %(message)s'
-#        , filename = LOG_HOME + '/log-' + today + '.log'
+        , filename = LOG_HOME + '/log-' + today + '.log'
     )
 
 ##Init終わり##
@@ -38,16 +39,25 @@ driver = webdriver.Chrome(
 driver.set_window_size(INIT_WINDOW_W, INIT_WINDOW_H )
 driver.get(TARGET_URL)
 
-#logging.debug(
-#    driver.page_source
-#    )
-
 dh = driver.execute_script("return document.body.scrollHeight")
 driver.set_window_size(INIT_WINDOW_W, dh )
 time.sleep(20)
 
 driver.save_screenshot(SCREENSHOT_PATH + '/shot-' + str(round(time.time())) + '.png')
 
+#logging.debug(
+#    driver.page_source
+#    )
+
+soup = bs4.BeautifulSoup( driver.page_source, "lxml" )
+elems = soup.select("section img")
+
+logging.debug(
+    "\n elements count : " + str(len(elems))
+    )
+
+for i in range(len(elems)) :
+    print(str(elems[i]))
 
 driver.quit()
 
