@@ -5,4 +5,4 @@
 *.png
 
 # 成果物
-/dist/
+/dist/*.json
