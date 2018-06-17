@@ -3,6 +3,7 @@
 	Œ»ól—¶‚µ‚Ä‚È‚¢‚Ì‚ÅProxyÝ’è“™‚Ís‚Á‚Ä‚¢‚Ü‚¹‚ñ
 
 –PythonŽÀsŠÂ‹«
+	windowsŠÂ‹«‚Å“®‚«‚Ü‚·
 	Python : 3.6.3
 	Anaconda : 3.5.0.1
 	
